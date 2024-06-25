@@ -30,6 +30,14 @@ namespace br.com.fiap.alert.api.Service
 
 
         public IEnumerable<AlertModel> ListarTodosAlert() => _repository.GetAll();
+        public IEnumerable<AlertModel> ListarTodosAlert(int pagina = 1, int tamanho = 10)
+        {
+            return _repository.GetAll(pagina,tamanho);
+        }
+        public IEnumerable<AlertModel> ListarTodosAlertUltimaReferencia(int ultimoId = 0, int tamanho = 10)
+        {
+            return _repository.GetAllReference(ultimoId, tamanho);
+        } 
 
 
         public AlertModel ObeterAlertPoId(int id) => _repository.GetById(id);
