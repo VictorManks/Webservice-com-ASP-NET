@@ -30,6 +30,8 @@ var mapperConfig = new AutoMapper.MapperConfiguration(c =>
 
     c.CreateMap<AlertModel, AlertViewModel>();
     c.CreateMap<AlertViewModel, AlertModel>();
+    c.CreateMap<AlertCreateViewModel, AlertModel>();
+    c.CreateMap<AlertUpdateViewModel, AlertModel>();
 }
 
  );
