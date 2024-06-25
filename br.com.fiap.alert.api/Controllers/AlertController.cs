@@ -5,7 +5,9 @@ using br.com.fiap.alert.api.Service;
 using br.com.fiap.alert.api.ViewModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-namespace br.com.fiap.alert.Controllers
+using Microsoft.AspNetCore.Authorization;
+
+namespace br.com.fiap.alert.api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

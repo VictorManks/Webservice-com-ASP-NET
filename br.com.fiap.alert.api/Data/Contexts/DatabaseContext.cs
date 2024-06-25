@@ -30,6 +30,16 @@ namespace br.com.fiap.alert.api.Data.Contexts
 
             }
             );
+
+            modelBuilder.Entity<UserModel>(entity =>
+            {
+                entity.ToTable("TB_USER");
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.Name);
+                entity.Property(e => e.Email);
+                entity.Property(e => e.PasswordHash);
+            }
+           );
         }
     }
 }
