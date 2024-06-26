@@ -22,6 +22,7 @@ namespace br.com.fiap.alert.api.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public ActionResult<IEnumerable<AlertPaginacaoViewModel>> Get([FromQuery] int referencia = 0, [FromQuery] int tamanho = 10)
         {
             var alerts = _service.ListarTodosAlertUltimaReferencia(referencia, tamanho);
@@ -48,6 +49,7 @@ namespace br.com.fiap.alert.api.Controllers
 
 
         [HttpGet("{id}")]
+        [Authorize]
         public ActionResult<AlertViewModel> Get(int id)
         {
             var alert = _service.ObeterAlertPoId(id);
