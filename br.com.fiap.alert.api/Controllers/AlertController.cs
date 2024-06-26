@@ -24,19 +24,26 @@ namespace br.com.fiap.alert.api.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<AlertPaginacaoViewModel>> Get([FromQuery] int referencia = 0, [FromQuery] int tamanho = 10)
         {
-            var clientes = _service.ListarTodosAlert(referencia, tamanho);
-            var viewModelList = _mapper.Map<IEnumerable<AlertViewModel>>(clientes);
-
-            var viewModel = new AlertPaginacaoRefencialViewModel
+            var alerts = _service.ListarTodosAlertUltimaReferencia(referencia, tamanho);
+            if (alerts.Any())
             {
-                Alerts = viewModelList,
-                PageSize = tamanho,
-                Ref = referencia,
-                NextRef = viewModelList.Last().AlertId
-            };
+                var viewModelList = _mapper.Map<IEnumerable<AlertViewModel>>(alerts);
+
+                var viewModel = new AlertPaginacaoRefencialViewModel
+                {
+                    Alerts = viewModelList,
+                    PageSize = tamanho,
+                    Ref = referencia,
+                    NextRef = viewModelList.Last().AlertId
+                };
 
 
-            return Ok(viewModel);
+                return Ok(viewModel);
+            }else
+            {
+                return NoContent();
+            }
+
         }
 
 

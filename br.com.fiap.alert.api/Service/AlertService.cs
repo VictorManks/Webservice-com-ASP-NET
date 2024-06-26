@@ -27,8 +27,6 @@ namespace br.com.fiap.alert.api.Service
             }
         }
 
-
-
         public IEnumerable<AlertModel> ListarTodosAlert() => _repository.GetAll();
         public IEnumerable<AlertModel> ListarTodosAlert(int pagina = 1, int tamanho = 10)
         {

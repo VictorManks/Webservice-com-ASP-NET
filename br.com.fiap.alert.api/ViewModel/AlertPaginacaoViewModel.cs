@@ -2,7 +2,7 @@ namespace br.com.fiap.alert.api.ViewModel;
 
 public class AlertPaginacaoViewModel
 {
-     public IEnumerable<AlertViewModel> Alerts { get; set; }
+        public IEnumerable<AlertViewModel> Alerts { get; set; }
         public int CurrentPage { get; set; }
         public int PageSize { get; set; }
         public bool HasPreviousPage => CurrentPage > 1;
