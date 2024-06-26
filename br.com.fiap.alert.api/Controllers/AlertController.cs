@@ -5,7 +5,6 @@ using br.com.fiap.alert.api.Service;
 using br.com.fiap.alert.api.ViewModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authorization;
 
 namespace br.com.fiap.alert.api.Controllers
 {
@@ -53,6 +52,7 @@ namespace br.com.fiap.alert.api.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public ActionResult Post([FromBody] AlertCreateViewModel viewModel)
         {
             var alert = _mapper.Map<AlertModel>(viewModel);
@@ -61,6 +61,7 @@ namespace br.com.fiap.alert.api.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize]
         public ActionResult Put(int id, [FromBody] AlertUpdateViewModel viewModel)
         {
             var alertExistente = _service.ObeterAlertPoId(id);
@@ -73,6 +74,7 @@ namespace br.com.fiap.alert.api.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize]
         public ActionResult Delete(int id)
         {
             _service.DeletarAlert(id);
