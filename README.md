@@ -17,8 +17,8 @@ Este projeto é um servidor .NET para gerenciar alertas.
   ```bash
   cd br.com.fiap.alert.api/
 ```
-   ```bash
+   
 3. Execute o servidor:
-
+```bash
   dotnet run
 ```
