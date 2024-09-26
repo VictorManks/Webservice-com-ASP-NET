@@ -21,3 +21,4 @@ Este projeto é um servidor .NET para gerenciar alertas.
 3. Execute o servidor:
    ```bash
   dotnet run
+```
