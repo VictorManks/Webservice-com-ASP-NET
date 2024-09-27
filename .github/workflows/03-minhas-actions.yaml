@@ -19,7 +19,7 @@ jobs:
             - name: Build
               run: dotnet build --no-restore
             - name: cd test
-              run: cd br.com.fiap.alert.teste/
+              run: cd br.com.fiap.alert.test/
             - name: Test
               run: dotnet test --no-build --verbosity normal
             - name: cd back
