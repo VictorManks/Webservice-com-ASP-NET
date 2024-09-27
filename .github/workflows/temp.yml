@@ -3,7 +3,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches: 
-      - master
+      - main
       - "feature/**"
   pull_request:
     branches: [ main ]
@@ -28,6 +28,13 @@ jobs:
       
     - name: Build
       run: dotnet build --configuration Release
+      
+    - name: Install test dependencies
+      run: |
+        dotnet add br.com.fiap.alert.test/br.com.fiap.alert.test.csproj package Microsoft.NET.Test.Sdk
+        dotnet add br.com.fiap.alert.test/br.com.fiap.alert.test.csproj package xunit
+        dotnet add br.com.fiap.alert.test/br.com.fiap.alert.test.csproj package xunit.runner.visualstudio
+        dotnet add br.com.fiap.alert.test/br.com.fiap.alert.test.csproj package coverlet.collector
       
     - name: Test
       run: dotnet test --configuration Release --no-build --verbosity normal
