@@ -12,7 +12,7 @@ Este projeto é um servidor .NET para gerenciar alertas.
 1. Clone o repositório:
    ```bash
   git clone <URL-do-repositorio>
-```
+
 2. Navegue até a pasta do projeto:
   ```bash
   cd br.com.fiap.alert.api/
