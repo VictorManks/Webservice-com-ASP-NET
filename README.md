@@ -16,9 +16,7 @@ Este projeto é um servidor .NET para gerenciar alertas.
 2. Navegue até a pasta do projeto:
   ```bash
   cd br.com.fiap.alert.api/
-```
    
 3. Execute o servidor:
 ```bash
   dotnet run
-```
