@@ -42,4 +42,5 @@ jobs:
     - name: Run API
       run: |
         cd br.com.fiap.alert.api
-        dotnet run
+        dotnet run &
+        sleep 10
