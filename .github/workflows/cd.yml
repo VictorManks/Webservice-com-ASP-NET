@@ -1,0 +1,52 @@
+name: CD Pipeline
+
+on:
+  push:
+    branches: 
+      - master
+
+env:
+  IMAGE_NAME: webservice-com-asp-net
+  AZURE_WEBAPP_NAME: fiap-webservice-dev
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '8.0.x'
+        
+    - name: Clear NuGet cache
+      run: dotnet nuget locals all --clear
+        
+    - name: Restore dependencies
+      run: dotnet restore
+    
+    - name: Login to Docker Hub
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+    - name: Build 
+      uses: docker/build-push-action@v6 
+      with: 
+        push: true
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/webservice-com-asp-net:prod
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - name: Deploy to Azure Web App
+      id: deploy-to-webapp
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: fiap-webservice-dev
+        publish-profile: ${{ secrets.AZURE_PROFILE }}
+        images: 'ghcr.io/${{ secrets.DOCKERHUB_USERNAME }}/webservice-com-asp-net:prod
