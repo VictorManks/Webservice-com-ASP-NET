@@ -10,7 +10,7 @@ env:
   AZURE_WEBAPP_NAME: fiap-webservice-dev
 
 jobs:
-  build_and_test:
+  build:
     runs-on: ubuntu-latest
     
     steps:
