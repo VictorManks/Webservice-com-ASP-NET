@@ -22,3 +22,8 @@ git clone https://github.com/VictorManks/Webservice-com-ASP-NET.git
 ```bash
  dotnet run
 ```
+❌ Em caso de erro tentem:
+```bash
+ dotnet nuget locals all --clear && dotnet restore
+```
+❌ Caso o erro persistir tente excluir o arquivo NuGet.config presente no diretório C:\Users<username>\AppData\Roaming\NuGet, e depois restaurá-lo utilizando o comando dotnet restore. Tente adicionar seu pacote após isso.
