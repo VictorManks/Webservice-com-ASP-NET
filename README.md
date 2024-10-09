@@ -11,7 +11,7 @@ Este projeto é um servidor .NET para gerenciar alertas.
 
 1. Clone o repositório:
 ```bash
-git clone <URL-do-repositorio>
+git clone https://github.com/VictorManks/Webservice-com-ASP-NET.git
 ```
 
 2. Navegue até a pasta do projeto:
