@@ -10,14 +10,15 @@ Este projeto é um servidor .NET para gerenciar alertas.
 ## Instruções de configuração
 
 1. Clone o repositório:
-   ```bash
-   git clone <URL-do-repositorio>
+```bash
+git clone <URL-do-repositorio>
+```
 
 2. Navegue até a pasta do projeto:
-  ```bash
-   cd Webservice-com-ASP-NET/br.com.fiap.alert.api/
+ ```bash
+ cd Webservice-com-ASP-NET/br.com.fiap.alert.api/
 ```
 3. Execute o servidor:
 ```bash
-   dotnet run
+ dotnet run
 ```
