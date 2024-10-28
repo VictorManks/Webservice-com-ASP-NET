@@ -1,0 +1,134 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1730159299.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"alerts",
+		"pageSize",
+		"ref",
+		"nextRef",
+		"previousPageUrl",
+		"nextPageUrl"
+	],
+	"properties": {
+		"alerts": {
+			"$id": "#root/alerts", 
+			"title": "Alerts", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/alerts/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"alertId",
+					"typeAlert",
+					"message",
+					"coords",
+					"author"
+				],
+				"properties": {
+					"alertId": {
+						"$id": "#root/alerts/items/alertId", 
+						"title": "Alertid", 
+						"type": "integer",
+						"examples": [
+							6
+						],
+						"default": 0
+					},
+					"typeAlert": {
+						"$id": "#root/alerts/items/typeAlert", 
+						"title": "Typealert", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Grave"
+						],
+						"pattern": "^.*$"
+					},
+					"message": {
+						"$id": "#root/alerts/items/message", 
+						"title": "Message", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"exemplo 2"
+						],
+						"pattern": "^.*$"
+					},
+					"coords": {
+						"$id": "#root/alerts/items/coords", 
+						"title": "Coords", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"00001"
+						],
+						"pattern": "^.*$"
+					},
+					"author": {
+						"$id": "#root/alerts/items/author", 
+						"title": "Author", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"david"
+						],
+						"pattern": "^.*$"
+					}
+				}
+			}
+
+		},
+		"pageSize": {
+			"$id": "#root/pageSize", 
+			"title": "Pagesize", 
+			"type": "integer",
+			"examples": [
+				10
+			],
+			"default": 0
+		},
+		"ref": {
+			"$id": "#root/ref", 
+			"title": "Ref", 
+			"type": "integer",
+			"examples": [
+				0
+			],
+			"default": 0
+		},
+		"nextRef": {
+			"$id": "#root/nextRef", 
+			"title": "Nextref", 
+			"type": "integer",
+			"examples": [
+				29
+			],
+			"default": 0
+		},
+		"previousPageUrl": {
+			"$id": "#root/previousPageUrl", 
+			"title": "Previouspageurl", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"/Cliente?referencia=0&tamanho=10"
+			],
+			"pattern": "^.*$"
+		},
+		"nextPageUrl": {
+			"$id": "#root/nextPageUrl", 
+			"title": "Nextpageurl", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"/Cliente?referencia=29&tamanho=10"
+			],
+			"pattern": "^.*$"
+		}
+	}
+}
