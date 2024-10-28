@@ -1,0 +1,55 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1730159003.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"typeAlert",
+		"message",
+		"coords",
+		"author"
+	],
+	"properties": {
+		"typeAlert": {
+			"$id": "#root/typeAlert", 
+			"title": "Typealert", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"TESTE"
+			],
+			"pattern": "^.*$"
+		},
+		"message": {
+			"$id": "#root/message", 
+			"title": "Message", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"Alerta de teste"
+			],
+			"pattern": "^.*$"
+		},
+		"coords": {
+			"$id": "#root/coords", 
+			"title": "Coords", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"-23.550,-46.633"
+			],
+			"pattern": "^.*$"
+		},
+		"author": {
+			"$id": "#root/author", 
+			"title": "Author", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"Teste Automatizado"
+			],
+			"pattern": "^.*$"
+		}
+	}
+}

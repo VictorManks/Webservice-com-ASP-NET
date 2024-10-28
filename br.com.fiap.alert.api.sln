@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "br.com.fiap.alert.api", "br
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "br.com.fiap.alert.test", "br.com.fiap.alert.test\br.com.fiap.alert.test.csproj", "{9D34CF9F-11C5-429A-81B3-862AE537E378}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowProject", "SpecFlowProject\SpecFlowProject.csproj", "{8F3E1C0E-1823-4111-AD59-7A87D46C38C0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{9D34CF9F-11C5-429A-81B3-862AE537E378}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D34CF9F-11C5-429A-81B3-862AE537E378}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D34CF9F-11C5-429A-81B3-862AE537E378}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8F3E1C0E-1823-4111-AD59-7A87D46C38C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8F3E1C0E-1823-4111-AD59-7A87D46C38C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8F3E1C0E-1823-4111-AD59-7A87D46C38C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8F3E1C0E-1823-4111-AD59-7A87D46C38C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
