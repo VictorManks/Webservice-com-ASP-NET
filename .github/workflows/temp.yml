@@ -37,7 +37,7 @@ jobs:
         dotnet add br.com.fiap.alert.test/br.com.fiap.alert.test.csproj package coverlet.collector
       
     - name: Test
-      run: cd br.com.fiap.alert.test && dotnet test --configuration Release --no-build --verbosity normal
+      run: cd br.com.fiap.alert.test && dotnet test --configuration Release --verbosity normal
       
     - name: Run API
       run: |
