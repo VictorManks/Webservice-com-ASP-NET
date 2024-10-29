@@ -27,7 +27,7 @@ jobs:
       run: dotnet restore
       
     - name: Build
-      run: dotnet nohup run
+      run: dotnet build --configuration Release
       
     - name: Install test dependencies
       run: |
@@ -35,12 +35,11 @@ jobs:
         dotnet add br.com.fiap.alert.test/br.com.fiap.alert.test.csproj package xunit
         dotnet add br.com.fiap.alert.test/br.com.fiap.alert.test.csproj package xunit.runner.visualstudio
         dotnet add br.com.fiap.alert.test/br.com.fiap.alert.test.csproj package coverlet.collector
-      
-    - name: Test
-      run: cd br.com.fiap.alert.test && dotnet test --configuration Release --verbosity normal
-      
+            
     - name: Run API
       run: |
         cd br.com.fiap.alert.api
-        dotnet run &
-        sleep 10
+        nohup dotnet run &
+
+    - name: Test
+      run: cd br.com.fiap.alert.test && dotnet test --configuration Release --no-build --verbosity normal
