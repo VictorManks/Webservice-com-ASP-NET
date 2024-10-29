@@ -18,10 +18,28 @@ git clone https://github.com/VictorManks/Webservice-com-ASP-NET.git
  ```bash
  cd Webservice-com-ASP-NET/br.com.fiap.alert.api/
 ```
-3. Execute o servidor:
+
+3. Execute o servidor em linux:
 ```bash
- dotnet run
+ nohup dotnet run
 ```
+
+3. Execute o servidor em windows:
+```bash
+ start dotnet run
+```
+
+4. Navegar até a pasta do test:
+ ```bash
+ cd ..
+ cd Webservice-com-ASP-NET/br.com.fiap.alert.test/
+```
+
+5. Executar test:
+```bash
+ dotnet test
+```
+
 ❌ Em caso de erro tentem:
 ```bash
  dotnet nuget locals all --clear && dotnet restore

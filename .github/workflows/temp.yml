@@ -37,8 +37,6 @@ jobs:
         dotnet add br.com.fiap.alert.test/br.com.fiap.alert.test.csproj package coverlet.collector
             
     - name: Run API
-      env:
-        ASPNETCORE_URLS: "http://localhost:5147"
       run: |
         cd br.com.fiap.alert.api
         dotnet run &
