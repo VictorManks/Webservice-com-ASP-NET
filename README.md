@@ -21,7 +21,7 @@ git clone https://github.com/VictorManks/Webservice-com-ASP-NET.git
 
 3. Execute o servidor em linux:
 ```bash
- nohup dotnet run
+ dotnet run
 ```
 
 4. Em outro terminal navegar até a pasta do test:
