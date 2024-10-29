@@ -33,7 +33,7 @@ namespace br.com.fiap.alert.test.Steps
         {
             _client = new RestClient(new RestClientOptions
             {
-                BaseUrl = new Uri("http://localhost/api/"),
+                BaseUrl = new Uri("http://localhost:5147/api/"),
                 ThrowOnAnyError = false
             });
         }
