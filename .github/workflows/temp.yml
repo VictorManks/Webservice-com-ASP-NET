@@ -39,7 +39,7 @@ jobs:
     - name: Run API
       run: |
         cd br.com.fiap.alert.api
-        sudo nohup dotnet run &
+        dotnet run
 
     - name: Test
-      run: cd br.com.fiap.alert.test && dotnet test --configuration Release --no-build --verbosity normal
+      run: cd br.com.fiap.alert.test && dotnet test 
